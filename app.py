@@ -70,11 +70,3 @@ if user_input:
             st.write("Key '{}' not present in vocabulary".format(user_input))
     else:
         st.write("Model has not been created yet. Please upload a file and create the model first.")
-
-
-first_word = st.text_input('Enter first word')
-second_word = st.text_input('Enter second word')
-
-if first_word and second_word:
-    similarity = st.session_state.model.wv.similarity(first_word,second_word)
-    st.write(similarity)
